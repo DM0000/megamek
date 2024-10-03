@@ -2409,6 +2409,9 @@ public class ClientGUI extends AbstractClientGUI implements BoardViewListener,
                     for (WeaponAttackAction waa : evt.getWAAs()) {
                         Entity ae = waa.getEntity(client.getGame());
                         String waaMsg;
+//                        if (waa.getWeaponId() == 28) {
+//                            continue;
+//                        }
                         if (ae != null) {
                             Mounted<?> weapon = ae.getEquipment(waa.getWeaponId());
                             waaMsg = weapon.getDesc() + " " + Messages.getString("FROM") + "  " + ae.getDisplayName();
